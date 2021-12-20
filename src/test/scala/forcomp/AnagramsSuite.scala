@@ -5,13 +5,14 @@ import org.junit.Assert.assertEquals
 
 
 class AnagramsSuite {
+
   import Anagrams._
 
   @Test def `wordOccurrences: abcd (3pts)`: Unit =
     assertEquals(List(('a', 1), ('b', 1), ('c', 1), ('d', 1)), wordOccurrences("abcd"))
 
   @Test def `wordOccurrences: RoberttoCarl (3pts)`: Unit =
-    assertEquals(List(('a',1), ('b',1), ('c',1), ('e',1), ('l',1), ('o',3), ('r',3), ('s',1), ('t',1)), wordOccurrences("Roberto Carlos12"))
+    assertEquals(List(('a', 1), ('b', 1), ('c', 1), ('e', 1), ('l', 1), ('o', 3), ('r', 3), ('s', 1), ('t', 1)), wordOccurrences("Roberto Carlos12"))
 
   @Test def `wordOccurrences: Robert (3pts)`: Unit =
     assertEquals(List(('b', 1), ('e', 1), ('o', 1), ('r', 2), ('t', 1)), wordOccurrences("Robert"))
@@ -20,8 +21,8 @@ class AnagramsSuite {
   @Test def `sentenceOccurrences: abcd e (5pts)`: Unit =
     assertEquals(List(('a', 1), ('b', 1), ('c', 1), ('d', 1), ('e', 1)), sentenceOccurrences(List("abcd", "e")))
 
- @Test def `sentenceOccurrences: RoberttoCarl e (5pts)`: Unit =
-    assertEquals(List(('a',1), ('b',1), ('c',1), ('e',1), ('l',1), ('o',3), ('r',3), ('s',1), ('t',1)), sentenceOccurrences(List("Roberto", "Carlos")))
+  @Test def `sentenceOccurrences: RoberttoCarl e (5pts)`: Unit =
+    assertEquals(List(('a', 1), ('b', 1), ('c', 1), ('e', 1), ('l', 1), ('o', 3), ('r', 3), ('s', 1), ('t', 1)), sentenceOccurrences(List("Roberto", "Carlos")))
 
 
   @Test def `dictionaryByOccurrences.get: eat (10pts)`: Unit =
@@ -35,11 +36,10 @@ class AnagramsSuite {
     assertEquals(Set("parley", "pearly", "player", "replay"), wordAnagrams("player").toSet)
 
 
-
   @Test def `subtract: lard - r (10pts)`: Unit = {
-    val lard = List(('e',1), ('i',1), ('l',2), ('n',1), ('r',1), ('u',2), ('x',1), ('z',1))
-    val r = List(('i',1), ('u',1), ('z',1))
-    val lad = List(('e',1), ('l',2), ('n',1), ('r',1), ('u',1), ('x',1))
+    val lard = List(('e', 1), ('i', 1), ('l', 2), ('n', 1), ('r', 1), ('u', 2), ('x', 1), ('z', 1))
+    val r = List(('i', 1), ('u', 1), ('z', 1))
+    val lad = List(('e', 1), ('l', 2), ('n', 1), ('r', 1), ('u', 1), ('x', 1))
     assertEquals(lad, subtract(lard, r))
   }
 
@@ -112,7 +112,7 @@ class AnagramsSuite {
   }
 
   @Test def `sentence anagrams:  rulez (10pts)`: Unit = {
-    val sentence = List("Yes","man")
+    val sentence = List("Yes", "man")
     val anas = List(
       List("en", "as", "my"),
       List("en", "my", "as"),
